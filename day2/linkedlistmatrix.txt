@@ -1,0 +1,21 @@
+class GFG
+{
+    static Node construct(int arr[][],int n)
+    {
+        //Add your code here.
+        Node t=LLconstruct(arr,0,0,n,n);
+        return t;
+    }
+    static Node LLconstruct(int arr[][],int i,int j,int m,int n)
+    {
+        if(i>m-1||j>n-1)
+        {
+            return null;
+        }
+        Node temp=new Node(arr[i][j]);
+        temp.right=LLconstruct(arr,i,j+1,m,n);
+        temp.down=LLconstruct(arr,i+1,j,m,n);
+        return temp;
+    }
+   
+}
