@@ -1,0 +1,27 @@
+class Solution {
+    Node deleteMid(Node head) {
+        // This is method only submission.
+        // You only need to complete the method.
+        //1 2 3 4 5 6 // 6 --4
+        //1 2 3 4 5 //5 -- 3
+        int size=0;
+        Node r=head;
+        while(r!=null){
+            r=r.next;
+            size++;
+        }
+        int x=size/2+1;
+        r=head;
+        for(int i=1;i<x-1;i++){
+            r=r.next;
+        }
+        if(r.next!=null){
+            r.next=r.next.next;
+        }
+        else
+        {
+            r.next=null;
+        }
+        return head;
+        }
+}
