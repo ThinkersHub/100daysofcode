@@ -1,0 +1,13 @@
+    public static int getCount(Node head)
+    {
+        if(head==null)
+        {
+            return 0;
+        }
+        int ct=0;
+        while(head!=null){
+            head=head.next;
+            ct++;
+        }
+        return ct;
+    }
