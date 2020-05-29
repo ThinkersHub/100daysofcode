@@ -1,0 +1,14 @@
+class GfG
+{
+    void deleteNode(Node node)
+    {
+         // Your code here
+         if(node.next==null){
+             node=null;
+             return;
+         }
+         int d1=node.next.data;
+         node.data=d1;
+         node.next=node.next.next;
+    }
+}
